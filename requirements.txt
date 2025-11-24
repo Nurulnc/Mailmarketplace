@@ -1,1 +1,1 @@
-pyTelegramBotAPI openpyxl
+pyTelegramBotAPI
