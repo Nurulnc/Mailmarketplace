@@ -4,13 +4,12 @@ from telebot import types
 # === তোমার তথ্য বসাও ===
 TOKEN = "8594094725:AAEtkG2hAgpn7oNxtp8uvrBiFwcaZ2d-oKA"          # BotFather থেকে নাও
 ADMIN_ID = 1651695602                    # তোমার Telegram ID (@nurul_nc এর ID)
-PRICE_PER_MAIL = 3                      # প্রতি মেইল ৩ টাকা
+PRICE_PER_MAIL = 2                      # প্রতি মেইল ২ টাকা
 
 PAYMENT_INFO = """💳 Payment Methods:
 
 🔴 bKash: 01815243007
-🟢 Nagad: 01815243007
-🔵 Rocket: 01815243007
+🟢 Binance Pay: 38017799
 
 **Total Amount: {total} Taka** ({quantity} × {price} Tk per mail)
 
@@ -29,7 +28,7 @@ def start(message):
     
     bot.send_message(message.chat.id, 
                      "🌟 **.EDU Email Seller Bot** 🌟\n\n"
-                     "💰 **Price: 3 Taka per mail**\n"
+                     "💰 **Price: 2 Taka per mail 24hr live**\n"
                      "✅ Instant delivery after payment\n"
                      "🚀 GitHub Pack, Spotify, Office 365, etc.",
                      parse_mode="Markdown", reply_markup=markup)
@@ -163,5 +162,6 @@ def approve_order(message):
 def fallback(message):
     if message.from_user.id not in user_data:
         bot.send_message(message.chat.id, "👋 /start চেপে অর্ডার দিন।")
+
 
 bot.infinity_polling()
