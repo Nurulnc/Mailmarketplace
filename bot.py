@@ -4,7 +4,7 @@ from telebot import types
 # === তোমার তথ্য বসাও ===
 TOKEN = "8594094725:AAEtkG2hAgpn7oNxtp8uvrBiFwcaZ2d-oKA"          # BotFather থেকে নাও
 ADMIN_ID = 1651695602                    # তোমার Telegram ID (@nurul_nc এর ID)
-PRICE_PER_MAIL = 2.5                      # প্রতি মেইল ২.৫ টাকা
+PRICE_PER_MAIL = 2                      # প্রতি মেইল ২ টাকা
 
 PAYMENT_INFO = """💳 Payment Methods:
 
@@ -28,7 +28,7 @@ def start(message):
     
     bot.send_message(message.chat.id, 
                      "🌟 **.EDU Email Seller Bot** 🌟\n\n"
-                     "💰 **Price: 2.5 Taka per mail 24hr live**\n"
+                     "💰 **Price: 2 Taka mail 24hr live**\n"
                      "✅ Instant delivery after payment\n"
                      "🚀 GitHub Pack, Spotify, Office 365, etc.",
                      parse_mode="Markdown", reply_markup=markup)
@@ -165,4 +165,5 @@ def fallback(message):
 
 
 bot.infinity_polling()
+
 
